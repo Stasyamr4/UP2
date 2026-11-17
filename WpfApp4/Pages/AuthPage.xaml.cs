@@ -55,7 +55,16 @@ namespace WpfApp4.Pages
 
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Добро пожаловать!");
+         
+            if (Auth(Login.Text, Password.Password))
+            {
+                MessageBox.Show("Добро пожаловать!");
+                NavigationService.Navigate(new CatalogPage(user));
+            }
+            else
+            {
+                MessageBox.Show("Неверный логин или пароль!");
+            }
         }
 
         private void EnterReg_Click(object sender, RoutedEventArgs e)
