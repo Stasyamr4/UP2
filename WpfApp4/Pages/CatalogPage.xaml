@@ -19,7 +19,7 @@
         <ListView x:Name="ProductList"  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Border Background="Gray" Width="500" Height="300">
+                    <Border Background="Gray">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition></ColumnDefinition>
