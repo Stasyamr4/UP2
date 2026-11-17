@@ -16,5 +16,12 @@ namespace WpfApp4
                 return Category.Name;
             }
         }
+        public string DiscountNum
+        {
+            get
+            {
+                return "Скидка: " + Discount + "%";
+            }
+        }
     }
 }

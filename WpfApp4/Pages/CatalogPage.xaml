@@ -19,26 +19,26 @@
         <ListView x:Name="ProductList"  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Border Background="Gray">
+                    <Border Margin="10">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition></ColumnDefinition>
-                                <ColumnDefinition></ColumnDefinition>
-                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition Width="160"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="120"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <Border Grid.Column="0">
+                            <Border Grid.Column="0" BorderBrush="Black">
                                 <Image Source="{Binding Image, TargetNullValue='pack://application:,,,/Images/picture.png', FallbackValue='pack://application:,,,/Images/picture.png'}"></Image>
                             </Border>
-                            <Border Grid.Column="1">
+                            <Border Grid.Column="1" BorderBrush="Black">
                                 <StackPanel HorizontalAlignment="Left">
-                                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="0,0,0,5">
                                         <TextBlock Text="{Binding CategoryName}"></TextBlock>
                                         <TextBlock Text="{Binding Name}"></TextBlock>
                                     </StackPanel>
                                 </StackPanel>
                             </Border>
-                            <Border Grid.Column="2">
-                                <TextBlock Text="{Binding Name}"></TextBlock>
+                            <Border Grid.Column="2" BorderBrush="Black">
+                                <TextBlock Text="{Binding DiscountNum}"></TextBlock>
                             </Border>
                         </Grid>
                     </Border>
