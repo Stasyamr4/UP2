@@ -57,5 +57,10 @@ namespace WpfApp4.Pages
         {
             MessageBox.Show("Добро пожаловать!");
         }
+
+        private void EnterReg_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new RegistrPage());
+        }
     }
 }

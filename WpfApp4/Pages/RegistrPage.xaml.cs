@@ -48,7 +48,7 @@ namespace WpfApp4.Pages
             else {
                 User newUser = new User()
                 {
-                    Login = login, Password = password, FIO = fio};
+                    Login = login, Password = password, Name = fio};
                 try
                 {
                     Core.Context.User.Add(newUser);
@@ -62,6 +62,11 @@ namespace WpfApp4.Pages
                     return false;
                 }
             }
+        }
+
+        private void Registrbutton_Click(object sender, RoutedEventArgs e)
+        {
+            Registration(FIO.Text, Login.Text, Password.Password, PasswordProverka.Password);
         }
     }
 }
