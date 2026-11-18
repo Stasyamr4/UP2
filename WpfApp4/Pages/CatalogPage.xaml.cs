@@ -28,7 +28,16 @@ namespace WpfApp4.Pages
             user = us;
             ProductList.ItemsSource = products;
         }
+        public CatalogPage()
+        {
+            InitializeComponent();
+           
+            ProductList.ItemsSource = products;
+        }
 
-       
+        private void ProfilButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new ProfilePage(user));
+        }
     }
 }

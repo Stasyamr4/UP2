@@ -15,8 +15,14 @@
                 <GradientStop Color="#FF771414" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button x:Name="ProfilButton" Content="Профиль" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,20,20,0"></Button>
-        <ListView x:Name="ProductList"  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0">
+            <Button x:Name="ProfilButton" Content="Профиль" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,20,20,0" Click="ProfilButton_Click"></Button>
+        </Border>
+        <ListView x:Name="ProductList" Grid.Row="1"  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border Margin="10">

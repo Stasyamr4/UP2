@@ -85,11 +85,15 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\ProductPartial.cs" />
+    <Compile Include="Model\UserPartial.cs" />
     <Compile Include="Order.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Pages\CatalogPage.xaml.cs">
       <DependentUpon>CatalogPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\RegistrPage.xaml.cs">
       <DependentUpon>RegistrPage.xaml</DependentUpon>
@@ -135,6 +139,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\CatalogPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ProfilePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
