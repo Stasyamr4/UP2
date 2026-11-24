@@ -71,5 +71,10 @@ namespace WpfApp4.Pages
         {
             NavigationService.Navigate(new RegistrPage());
         }
+
+        private void EnterGosti_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new CatalogPage());
+        }
     }
 }
