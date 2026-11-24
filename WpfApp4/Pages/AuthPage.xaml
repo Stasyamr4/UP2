@@ -25,6 +25,8 @@
 
             <Button x:Name="Enter" Width="200" Height="30" Margin="0,20,0,0" Content="ВХОД" Click="Enter_Click"></Button>
             <Button x:Name="EnterReg" Width="200" Height="30" Margin="0,20,0,0" Content="Нет аккаунта? Зарегистрируйтесь" Background="Transparent" Click="EnterReg_Click"></Button>
+           
         </StackPanel>
+        <Button x:Name="EnterGosti" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="20" Content="Войти как гость"></Button>
     </Grid>
 </Page>

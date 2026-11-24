@@ -23,5 +23,19 @@ namespace WpfApp4
                 return "Скидка: " + Discount + "%";
             }
         }
+        public string SupplierName
+        {
+            get
+            {
+                return Supplier.Name;
+            }
+        }
+        public string ProducerName
+        {
+            get
+            {
+                return Producer.Name;
+            }
+        }
     }
 }

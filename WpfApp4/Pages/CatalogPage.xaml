@@ -22,28 +22,37 @@
         <Border Grid.Row="0">
             <Button x:Name="ProfilButton" Content="Профиль" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,20,20,0" Click="ProfilButton_Click"></Button>
         </Border>
-        <ListView x:Name="ProductList" Grid.Row="1"  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+        <ListView x:Name="ProductList" Grid.Row="1"  ScrollViewer.HorizontalScrollBarVisibility="Disabled"  HorizontalContentAlignment="Stretch" >
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Border Margin="10">
+                    <Border Margin="10" >
                         <Grid>
-                            <Grid.ColumnDefinitions>
+                            <Grid.ColumnDefinitions >
                                 <ColumnDefinition Width="160"></ColumnDefinition>
                                 <ColumnDefinition Width="*"></ColumnDefinition>
                                 <ColumnDefinition Width="120"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <Border Grid.Column="0" BorderBrush="Black">
+                            <Border Grid.Column="0" BorderBrush="Black" >
                                 <Image Source="{Binding Image, TargetNullValue='pack://application:,,,/Images/picture.png', FallbackValue='pack://application:,,,/Images/picture.png'}"></Image>
                             </Border>
-                            <Border Grid.Column="1" BorderBrush="Black">
+                            
+                            <Border Grid.Column="1" BorderBrush="Black" Margin="20,0,0,0">
                                 <StackPanel HorizontalAlignment="Left">
                                     <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="0,0,0,5">
                                         <TextBlock Text="{Binding CategoryName}"></TextBlock>
-                                        <TextBlock Text="{Binding Name}"></TextBlock>
+                                        <TextBlock Text="|" Margin="5,0,0,0"></TextBlock>
+                                        <TextBlock Text="{Binding Name}" Margin="5,0,0,0"></TextBlock>
                                     </StackPanel>
+                                    <TextBlock Text="{Binding Description}"></TextBlock>
+                                    <TextBlock Text="{Binding ProducerName}"></TextBlock>
+                                    <TextBlock Text="{Binding SupplierName}"></TextBlock>
+                                    <TextBlock Text="{Binding Price}"></TextBlock>
+                                    <TextBlock Text="{Binding Unit}"></TextBlock>
+                                    <TextBlock Text="{Binding Count}"></TextBlock>
+                                    
                                 </StackPanel>
                             </Border>
-                            <Border Grid.Column="2" BorderBrush="Black">
+                            <Border Grid.Column="2" BorderBrush="Black" Margin="20,0,0,0">
                                 <TextBlock Text="{Binding DiscountNum}"></TextBlock>
                             </Border>
                         </Grid>
