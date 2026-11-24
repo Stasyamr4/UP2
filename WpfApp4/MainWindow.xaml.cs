@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp4.Pages;
 
 namespace WpfApp4
 {
@@ -23,6 +24,28 @@ namespace WpfApp4
         public MainWindow()
         {
             InitializeComponent();
+            
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainFrame.CanGoBack)
+            {
+                MainFrame.GoBack();
+            }
+
+        }
+
+        private void MainFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+            if (e.Content is AuthPage)
+            {
+                Back.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                Back.Visibility = Visibility.Visible;
+            }
         }
     }
 }

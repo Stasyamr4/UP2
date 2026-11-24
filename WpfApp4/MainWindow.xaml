@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Frame Source="Pages/AuthPage.xaml" NavigationUIVisibility="Hidden"></Frame>
+        <Frame x:Name="MainFrame" Source="Pages/AuthPage.xaml" NavigationUIVisibility="Hidden" Navigated="MainFrame_Navigated"></Frame>
+        <Button x:Name="Back" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="20" Padding="7" Click="Back_Click"></Button>
     </Grid>
 </Window>
